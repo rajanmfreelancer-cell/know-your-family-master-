@@ -3,18 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Know Your Family | Preserve Your Roots</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/kyf-favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/kyf-favicon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/kyf-favicon-180.png">
+    <title>Know Your Family | Tamil Heritage Books &amp; Family History</title>
+    <meta name="description" content="Tamil heritage books for diaspora families in Malaysia. We interview elders, restore old photos, and craft a custom hardcover family history. In print. Online.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#304961">
+    <link rel="canonical" href="https://knowurfamily.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Know Your Family | Tamil Heritage Books &amp; Family History">
+    <meta property="og:description" content="We interview elders, restore old family photos, and trace your Tamil lineage into a custom hardcover Heritage Book and a private digital vault. In print. Online. Forever.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://knowurfamily.com/">
+    <meta property="og:image" content="https://knowurfamily.com/images/heritage_book_premium.png">
+    <meta property="og:site_name" content="Know Your Family">
+    <meta property="og:locale" content="en_MY">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Know Your Family | Tamil Heritage Books &amp; Family History">
+    <meta name="twitter:description" content="Custom Tamil heritage books for diaspora families. Elder interviews, restored photos, family tree research, hardcover keepsake. In print. Online. Forever.">
+    <meta name="twitter:image" content="https://knowurfamily.com/images/heritage_book_premium.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Tiro+Tamil:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=3">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://knowurfamily.com/#organization",
+          "name": "Know Your Family",
+          "url": "https://knowurfamily.com/",
+          "logo": "https://knowurfamily.com/images/heritage_book_premium.png",
+          "description": "Premium Tamil heritage documentation service. We interview elders, restore old family photographs, research lineage, and produce a custom hardcover Heritage Book plus a permanent private digital vault for Tamil diaspora families.",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Malaysia"
+          },
+          "sameAs": [
+            "https://www.facebook.com/knowurfamily",
+            "https://www.instagram.com/knowurfamily",
+            "https://www.youtube.com/@knowurfamily"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://knowurfamily.com/#website",
+          "url": "https://knowurfamily.com/",
+          "name": "Know Your Family",
+          "description": "Tamil heritage books and family history documentation for the Tamil diaspora.",
+          "publisher": { "@id": "https://knowurfamily.com/#organization" },
+          "inLanguage": "en-MY",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://knowurfamily.com/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://knowurfamily.com/#service",
+          "serviceType": "Family heritage book & genealogy",
+          "name": "Tamil Heritage Book & Family History Documentation",
+          "description": "Elder interviews, photo restoration, family tree and lineage research, and a custom hardcover Heritage Book with a permanent private digital vault.",
+          "provider": { "@id": "https://knowurfamily.com/#organization" },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Malaysia"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://knowurfamily.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How long does the process take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Typically 4 to 6 weeks from our first interview to the printed book delivery."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if we don't have many old photos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "That is completely fine. We focus on the narrative and use historical context to enrich your story, drawing on Tamil migration records and the memories of your elders."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does it cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Each book is custom-crafted. Fill out the form, and we will provide a tailored quote based on your family's size and needs."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
     <!-- Navbar -->
     <nav class="navbar navbar-light-text">
-        <a href="index.html" class="logo">Know Your Family<span class="logo-dot">.</span></a>
+        <a href="index.html" class="logo"><img src="images/kyf-logo-circle.png" srcset="images/kyf-logo-circle.png 1x, images/kyf-logo-circle@2x.png 2x" alt="Know Your Family" class="logo-img"></a>
         <div class="menu-toggle"><span></span><span></span><span></span></div>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -27,31 +136,24 @@
     </nav>
 
     <!-- AURORA HERO SECTION -->
-    <main>
+    <main id="main-content">
         <section class="aurora-hero" style="position: relative;">
             <div class="aurora-layer"></div>
             <div class="line-grid-overlay"></div>
-            
-            <!-- Traditional Corner Accents -->
-            <img src="images/kolam-corner.png" class="corner-kolam top-left" alt="Kolam">
-            <img src="images/kolam-corner.png" class="corner-kolam top-right" alt="Kolam">
-            
+
             <div class="hero-content-wrapper gs-fade-up">
                 <h1 class="hero-title-dark" style="color: var(--primary);">Your Roots Are Still<br>Waiting For You.</h1>
                 
                 <div class="changing-text-container light-text">
                     <div class="changing-text active">Before the memories fade away.</div>
-                    <div class="changing-text">Preserving the echoes of our past.</div>
-                    <div class="changing-text">Your family's origin story, documented.</div>
+                    <div class="changing-text">From an ancestral village in Tamil Nadu to home in Malaysia.</div>
+                    <div class="changing-text">Your family's origin story, documented in print and online.</div>
                 </div>
                 
                 <a href="#contact" class="hero-tamil-stamp">
                     <span class="stamp-text">START MY LEGACY</span>
                 </a>
             </div>
-            
-            <!-- Grand Gopuram Focus -->
-            <img src="images/gopuram-hero.png" alt="Temple Gopuram" class="hero-gopuram">
         </section>
     </main>
 
@@ -67,47 +169,44 @@
                 <p>Average Delivery</p>
             </div>
             <div class="metric-item gs-fade">
-                <h3 style="font-family: 'Tiro Tamil', serif;">மரபு</h3>
+                <h3 lang="ta" style="font-family: 'Tiro Tamil', serif;">மரபு</h3>
                 <p>Tamil Identity</p>
             </div>
         </div>
     </section>
 
     <!-- ORNAMENTAL DIVIDER -->
-    <div class="gs-fade">
-        <div class="diya-divider">
-            <div class="diya-line"></div>
-            <img src="images/diya.png" alt="Traditional Brass Lamp" class="diya-img" loading="lazy">
-            <div class="diya-line"></div>
-        </div>
-    </div>
+    <div class="motif-band gs-fade" role="presentation" aria-hidden="true"></div>
 
     <!-- SECTION 2: THE FEELING (Solid Deep Teal) -->
-    <section class="section section-feeling bg-teal-solid" style="position: relative;">
+    <section class="section section-feeling bg-teal-solid sec-blue" style="position: relative;">
         <!-- Traditional Corner Accents for Section 2 -->
-        <img src="images/kolam-corner.png" class="corner-kolam bottom-left" alt="Kolam" loading="lazy">
-        <img src="images/kolam-corner.png" class="corner-kolam bottom-right" alt="Kolam" loading="lazy">
+        <img src="images/kolam-corner.png" class="corner-kolam bottom-left" alt="" aria-hidden="true" loading="lazy">
+        <img src="images/kolam-corner.png" class="corner-kolam bottom-right" alt="" aria-hidden="true" loading="lazy">
         
-        <!-- Decorated Horses -->
-        <img src="images/horse-accent.png" class="horse-accent" style="position: absolute; left: 5%; top: 50%; transform: translateY(-50%);" alt="Decorated Horse" loading="lazy">
-        <img src="images/horse-accent.png" class="horse-accent" style="position: absolute; right: 5%; top: 50%; transform: translateY(-50%) scaleX(-1);" alt="Decorated Horse" loading="lazy">
+        <!-- Poikkal Kuthirai folk dance horses -->
+        <img src="images/poikkal-kuthirai.png" class="horse-accent" style="position: absolute; left: 5%; top: 50%; transform: translateY(-50%);" alt="" aria-hidden="true" loading="lazy">
+        <img src="images/poikkal-kuthirai.png" class="horse-accent" style="position: absolute; right: 5%; top: 50%; transform: translateY(-50%) scaleX(-1);" alt="" aria-hidden="true" loading="lazy">
         
         <div class="container text-center-panel gs-fade" style="position: relative; z-index: 10;">
             <h2 class="display-quote">"The fading echoes of our past..."</h2>
-            <p class="tamil-sub" style="color: var(--secondary);">நமது கடந்த காலத்தின் மங்கும் எதிரொலிகள்...</p>
-            <p class="text-muted mt-4" style="font-size: 1.2rem;">For the Tamil diaspora, generations move fast. Names are forgotten. Stories are lost. What will your children know about where they came from?</p>
+            <p lang="ta" class="tamil-sub" style="color: var(--secondary);">நமது கடந்த காலத்தின் மங்கும் எதிரொலிகள்...</p>
+            <p class="text-muted mt-4" style="font-size: 1.2rem;">For the Tamil diaspora, generations move fast. The grandmother who remembered the name of the ancestral village stops telling the story. The estate, the temple, the long crossing from Tamil Nadu to Malaysia all blur into a few half-remembered photos. Once an elder is gone, those details are gone with them. What will your children and grandchildren know about where they truly came from?</p>
         </div>
     </section>
 
     <!-- SECTION 3: HOW IT WORKS (Off White) -->
-    <section class="section bg-base" id="how-it-works">
+    <section class="section bg-base sec-gold" id="how-it-works" style="position: relative; overflow: hidden;">
+        <!-- Kuthuvilakku temple lamps -->
+        <img src="images/kuthuvilakku.png" class="motif-side left" alt="" aria-hidden="true" loading="lazy">
+        <img src="images/kuthuvilakku.png" class="motif-side right" alt="" aria-hidden="true" loading="lazy">
         <div class="container">
             <div class="section-header center gs-fade">
                 <h2 style="color: var(--primary);">How It Works</h2>
-                <p class="tamil-sub">இது எப்படி வேலை செய்கிறது</p>
+                <p lang="ta" class="tamil-sub">இது எப்படி வேலை செய்கிறது</p>
                 <div class="diya-divider">
                     <div class="diya-line"></div>
-                    <img src="images/diya.png" alt="Diya" class="diya-img" style="height: 40px;" loading="lazy">
+                    <img src="images/diya.png" alt="" aria-hidden="true" class="diya-img" style="height: 40px;" loading="lazy">
                     <div class="diya-line"></div>
                 </div>
             </div>
@@ -122,7 +221,7 @@
                         </svg>
                     </div>
                     <h3>The Interview</h3>
-                    <p class="text-muted">We sit down with your elders to record their stories, memories, and timelines.</p>
+                    <p class="text-muted">We sit with your elders, in Tamil and English, and record the stories only they can tell. Names, the ancestral village, the journey to Malaysia, the small everyday memories that hold a family together.</p>
                 </div>
                 <div class="process-card gs-fade">
                     <div class="step-num">Step 02</div>
@@ -134,7 +233,7 @@
                         </svg>
                     </div>
                     <h3>The Archive</h3>
-                    <p class="text-muted">We digitize and restore your old family photographs and historical documents.</p>
+                    <p class="text-muted">We digitize and carefully restore your old family photographs and documents. Faded portraits, creased estate records, and handwritten notes are brought back to life and kept safe in your private digital vault.</p>
                 </div>
                 <div class="process-card gs-fade">
                     <div class="step-num">Step 03</div>
@@ -145,14 +244,14 @@
                         </svg>
                     </div>
                     <h3>The Book</h3>
-                    <p class="text-muted">Our designers craft a premium heritage book, printing a masterpiece for your family.</p>
+                    <p class="text-muted">Our designers weave it all into a custom hardcover Tamil heritage book, with your family tree, migration story, and restored photos. A keepsake built to be passed down. In print. Online. Forever.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION 4: THE HERITAGE BOOK PREVIEW (Gradient) -->
-    <section class="section section-book bg-teal-gradient">
+    <section class="section section-book bg-teal-gradient sec-blue">
         <div class="container split-layout">
             <div class="split-img gs-fade">
                 <div class="museum-frame">
@@ -160,14 +259,15 @@
                 </div>
             </div>
             <div class="split-text gs-fade">
+                <img src="images/kalasam.png" class="motif-emblem" style="margin: 0 0 1rem;" alt="" aria-hidden="true" loading="lazy">
                 <h2>Your Family's Legacy, Documented.</h2>
-                <p class="tamil-sub" style="color: var(--secondary);">உங்கள் குடும்பத்தின் மரபு</p>
-                <p class="text-light mt-4 mb-4" style="opacity: 0.8;">A physical heirloom passed down through generations, capturing the essence of your family's journey. Everything is included in your personal vault.</p>
+                <p lang="ta" class="tamil-sub" style="color: var(--secondary);">உங்கள் குடும்பத்தின் மரபு</p>
+                <p class="text-light mt-4 mb-4" style="opacity: 0.8;">A hardcover heirloom written to be read aloud at the dinner table and handed down for generations. It carries your family's journey from an ancestral village in Tamil Nadu to home in Malaysia. Every page also lives in your permanent private digital vault, safe from fire, floods, and fading.</p>
                 <ul class="check-list">
-                    <li><span class="check-pill">✓</span> Ancestral Origin Story</li>
-                    <li><span class="check-pill">✓</span> Migration History Maps</li>
-                    <li><span class="check-pill">✓</span> Detailed Family Tree</li>
-                    <li><span class="check-pill">✓</span> Restored Photographs</li>
+                    <li><span class="check-pill">✓</span> Ancestral origin story, traced to your village in Tamil Nadu</li>
+                    <li><span class="check-pill">✓</span> Tamil migration journey to Malaysia, mapped</li>
+                    <li><span class="check-pill">✓</span> Detailed Tamil family tree across generations</li>
+                    <li><span class="check-pill">✓</span> Restored photographs and a private digital vault</li>
                 </ul>
                 <a href="#contact" class="btn-gold mt-4">Preserve My Story</a>
             </div>
@@ -178,23 +278,65 @@
     <section class="section why-matters-section">
         <img src="images/tamil_courtyard_bright.png" alt="Tamil Heritage Courtyard" class="bg-img-absolute" loading="lazy">
         <div class="container relative">
+            <img src="images/mayil.png" class="motif-watermark" alt="" aria-hidden="true" loading="lazy">
             <div class="glass-panel text-center-panel gs-fade">
                 <h2 style="color: var(--primary);">Why It Matters</h2>
-                <p class="tamil-sub">இது ஏன் முக்கியமானது</p>
-                <p class="text-muted mt-4" style="font-size: 1.2rem;">Knowing where you come from gives you a foundation for where you are going. Preserving your Tamil heritage is a gift of identity to the next generation.</p>
+                <p lang="ta" class="tamil-sub">இது ஏன் முக்கியமானது</p>
+                <p class="text-muted mt-4" style="font-size: 1.2rem;">Knowing where you come from gives you a steady place to stand. A child who can name the village their great-grandfather left, who knows why the family crossed the sea to Malaysia, carries that pride for life. Preserving your Tamil roots is not about looking back with regret. It is a gift of identity, handed forward with pride to the next generation.</p>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 7: BLOG / STORIES (Off White) -->
-    <section class="section bg-base" id="stories">
+    <!-- SECTION 6: WHO WE BUILD FOR (Off White) -->
+    <section class="section bg-base sec-gold" id="who-we-build-for" style="position: relative; overflow: hidden;">
+        <img src="images/kalasam.png" class="motif-side left" alt="" aria-hidden="true" loading="lazy">
+        <img src="images/kalasam.png" class="motif-side right" alt="" aria-hidden="true" loading="lazy">
         <div class="container">
             <div class="section-header center gs-fade">
-                <h2 style="color: var(--primary);">Stories & Insights</h2>
-                <p class="tamil-sub">கதைகள் மற்றும் நுண்ணறிவுகள்</p>
+                <p lang="ta" class="tamil-sub" style="margin-bottom: 0.25rem;">யாருக்காக நாங்கள் உருவாக்குகிறோம்</p>
+                <h2 style="color: var(--primary);">Who We Build For</h2>
                 <div class="diya-divider">
                     <div class="diya-line"></div>
-                    <img src="images/diya.png" alt="Diya" class="diya-img" style="height: 40px;" loading="lazy">
+                    <img src="images/diya.png" alt="" aria-hidden="true" class="diya-img" style="height: 40px;" loading="lazy">
+                    <div class="diya-line"></div>
+                </div>
+                <p class="text-muted mt-4" style="font-size: 1.15rem; max-width: 720px; margin-left: auto; margin-right: auto;">Know Your Family is built for Tamil families who feel the distance between the old country and the lives their children live now. If any of these sound like your family, your story is worth keeping.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card gs-fade">
+                    <h3>The Malaysian Tamil Family</h3>
+                    <p class="text-muted">Generations who built their lives in Malaysia and Southeast Asia, carrying a heritage rooted in Tamil Nadu. We help you keep both halves of that story in one book.</p>
+                </div>
+                <div class="process-card gs-fade">
+                    <h3>The Elder With Stories to Tell</h3>
+                    <p class="text-muted">A grandparent who remembers the village, the crossing, and the names that no document records. We record those memories in Tamil and English before they fade.</p>
+                </div>
+                <div class="process-card gs-fade">
+                    <h3>The Child Searching for Roots</h3>
+                    <p class="text-muted">Sons and daughters who grew up far from the ancestral village and want to give their own children a clear answer to a simple question: where do we come from?</p>
+                </div>
+            </div>
+
+            <ul class="check-list gs-fade" style="max-width: 760px; margin: 2.5rem auto 0;">
+                <li><span class="check-pill">✓</span> Your Tamil family tree, researched and drawn across generations</li>
+                <li><span class="check-pill">✓</span> Your ancestral village in Tamil Nadu, named and placed on the map</li>
+                <li><span class="check-pill">✓</span> Your migration to Malaysia, told as the journey it really was</li>
+                <li><span class="check-pill">✓</span> A custom hardcover Tamil heritage book, plus a permanent digital vault</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SECTION 7: BLOG / STORIES (Off White) -->
+    <section class="section bg-base sec-gold" id="stories">
+        <div class="container">
+            <div class="section-header center gs-fade">
+                <img src="images/sangu-mani.png" class="motif-emblem" style="width: 120px;" alt="" aria-hidden="true" loading="lazy">
+                <h2 style="color: var(--primary);">Stories & Insights</h2>
+                <p lang="ta" class="tamil-sub">கதைகள் மற்றும் நுண்ணறிவுகள்</p>
+                <div class="diya-divider">
+                    <div class="diya-line"></div>
+                    <img src="images/diya.png" alt="" aria-hidden="true" class="diya-img" style="height: 40px;" loading="lazy">
                     <div class="diya-line"></div>
                 </div>
             </div>
@@ -234,10 +376,10 @@
         <div class="faq-half">
             <div class="gs-fade">
                 <h2>Frequently Asked Questions</h2>
-                <p class="tamil-sub mb-4" style="color: var(--secondary);">அடிக்கடி கேட்கப்படும் கேள்விகள்</p>
+                <p lang="ta" class="tamil-sub mb-4" style="color: var(--secondary);">அடிக்கடி கேட்கப்படும் கேள்விகள்</p>
                 
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <button type="button" class="faq-question" aria-expanded="false">
                         <span>How long does the process take?</span>
                         <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
                     </button>
@@ -247,7 +389,7 @@
                 </div>
                 
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <button type="button" class="faq-question" aria-expanded="false">
                         <span>What if we don't have many old photos?</span>
                         <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
                     </button>
@@ -257,7 +399,7 @@
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <button type="button" class="faq-question" aria-expanded="false">
                         <span>How much does it cost?</span>
                         <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
                     </button>
@@ -270,24 +412,24 @@
         
         <!-- Off White Form Side -->
         <div class="form-half bg-base" id="contact" style="position: relative;">
-            <img src="images/yali-bg.png" class="yali-bg" alt="Yali Watermark" loading="lazy">
+            <img src="images/yali-bg.png" class="yali-bg" alt="" aria-hidden="true" loading="lazy">
             <div class="form-wrapper gs-fade" style="position: relative; z-index: 1;">
-                <img src="images/thamboolam.png" alt="Auspicious Thamboolam" class="thamboolam-icon" loading="lazy">
+                <img src="images/thamboolam.png" alt="" aria-hidden="true" class="thamboolam-icon" loading="lazy">
                 <h2 style="color: var(--primary); text-align: center;">Start Your Legacy</h2>
                 <p class="text-muted mb-4" style="text-align: center;">Fill out the form below and we will contact you within 24 hours.</p>
                 
                 <form id="inquiry-form" action="thank-you.html">
                     <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" class="elegant-input" placeholder="Karthik" required>
+                        <label for="inq-name">Full Name</label>
+                        <input id="inq-name" name="name" type="text" class="elegant-input" placeholder="Karthik" required aria-required="true">
                     </div>
                     <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" class="elegant-input" placeholder="you@example.com" required>
+                        <label for="inq-email">Email Address</label>
+                        <input id="inq-email" name="email" type="email" class="elegant-input" placeholder="you@example.com" required aria-required="true">
                     </div>
                     <div class="form-group">
-                        <label>Family Size</label>
-                        <select class="elegant-input" required>
+                        <label for="inq-size">Family Size</label>
+                        <select id="inq-size" name="family_size" class="elegant-input" required aria-required="true">
                             <option value="" disabled selected>Select size...</option>
                             <option value="small">Small (Immediate)</option>
                             <option value="medium">Medium (Extended)</option>
@@ -305,14 +447,8 @@
             <!-- Brand Column -->
             <div class="footer-col brand-col">
                 <div class="footer-logo-container">
-                    <div class="footer-logo-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <polygon points="12,2 22,12 12,22 2,12" />
-                            <circle cx="12" cy="12" r="3" fill="currentColor" />
-                        </svg>
+                        <img src="images/kyf-logo-circle.png" srcset="images/kyf-logo-circle.png 1x, images/kyf-logo-circle@2x.png 2x" alt="Know Your Family" class="footer-logo-img">
                     </div>
-                    <span class="footer-brand-name">Know Your Family</span>
-                </div>
                 <p class="footer-desc">Dedicated to preserving Tamil culture through premium genealogy, personal history, and breathtaking legacy books.</p>
                 <div class="footer-socials">
                     <a href="#" class="social-box" aria-label="Facebook">
@@ -350,9 +486,9 @@
             <div class="footer-col">
                 <h4 class="footer-heading">Connect</h4>
                 <ul class="footer-contact">
-                    <li><a href="tel:18002081405" class="contact-link">1 (800) 208-1405</a></li>
-                    <li><a href="mailto:hello@knowyourfamily.com" class="contact-link">hello@knowyourfamily.com</a></li>
-                    <li class="contact-text">Chennai & Worldwide</li>
+                    <li><a href="tel:+60000000000" class="contact-link">[+60 phone placeholder]</a></li>
+                    <li><a href="mailto:hello@knowurfamily.com" class="contact-link">hello@knowurfamily.com</a></li>
+                    <li class="contact-text">Kuala Lumpur, Malaysia</li>
                 </ul>
             </div>
         </div>

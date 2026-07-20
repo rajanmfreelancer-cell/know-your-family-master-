@@ -13,7 +13,13 @@
     --antique-gold: #b38b3a;    /* Burnished Gold for dividers */
     --antique-gold-hover: #d4af37;
     --white: #FFFFFF;           /* Raised Surface / Card */
-    
+
+    /* Two-Tone Theme — alternating section backgrounds */
+    --section-blue: #304961;    /* Deep slate blue */
+    --section-gold: #b38b3a;    /* Antique gold */
+    --blue-deep: #233747;       /* Darker blue for headings/footers */
+    --gold-deep: #7a5a16;       /* AA-contrast gold for SMALL text on white */
+
     /* Variable Aliases */
     --primary: var(--deep-teal);
     --secondary: var(--antique-gold);
@@ -89,14 +95,14 @@ h1, h2, h3, .display-quote {
     letter-spacing: 0.01em;
 }
 
-h2 { 
-    font-size: 2.75rem; 
-    line-height: 1.25; 
-    margin-bottom: 0.75rem; 
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
 }
 
 .page-title {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     margin-top: 1rem;
 }
 
@@ -127,6 +133,137 @@ h2 {
     color: var(--text-dark); 
 }
 .bg-teal-gradient h2, .bg-teal-gradient h3 { color: var(--primary); }
+
+/* ═══════════════════════════════════════════════════════
+   TWO-TONE ALTERNATING SECTION THEME (Blue / Antique Gold)
+   Recolors section backgrounds + intro/header text only.
+   Opaque cards (.process-card, .blog-card, .metric-item) are
+   left untouched so their text stays readable.
+   ═══════════════════════════════════════════════════════ */
+.sec-blue {
+    background: var(--section-blue) !important;
+    /* Illuminated-manuscript gold hairline at the top of each blue chapter */
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg, transparent 4%, var(--gold) 30%, var(--gold-bright) 50%, var(--gold) 70%, transparent 96%) 1;
+}
+.sec-gold { background: #ffffff !important; }
+
+/* Headings & intro text on BLUE sections -> white + gold accent */
+.sec-blue .section-header h2,
+.sec-blue .text-center-panel h2,
+.sec-blue .split-text h2,
+.sec-blue .display-quote { color: #ffffff !important; }
+.sec-blue .section-header .tamil-sub,
+.sec-blue .text-center-panel .tamil-sub,
+.sec-blue .split-text .tamil-sub { color: var(--antique-gold-hover) !important; }
+.sec-blue .section-header .text-muted,
+.sec-blue .text-center-panel .text-muted,
+.sec-blue .split-text p,
+.sec-blue .text-center-panel p { color: rgba(255, 255, 255, 0.85) !important; }
+.sec-blue .split-text .check-list li { color: rgba(255, 255, 255, 0.92) !important; }
+
+/* White sections -> gold headings + dark body text */
+.sec-gold .section-header h2,
+.sec-gold .text-center-panel h2,
+.sec-gold .split-text h2,
+.sec-gold .display-quote { color: var(--antique-gold) !important; }
+.sec-gold .section-header .tamil-sub,
+.sec-gold .text-center-panel .tamil-sub,
+.sec-gold .split-text .tamil-sub { color: var(--antique-gold) !important; }
+.sec-gold .section-header .text-muted,
+.sec-gold .text-center-panel .text-muted,
+.sec-gold .split-text p,
+.sec-gold .text-center-panel p { color: var(--text-muted) !important; }
+.sec-gold .split-text .check-list li { color: var(--text-dark) !important; }
+
+/* Long-form article content on colored sections */
+.sec-blue .article-content,
+.sec-blue .article-content p,
+.sec-blue .article-content li,
+.sec-blue .article-content strong { color: rgba(255, 255, 255, 0.9) !important; }
+.sec-blue .article-content h2,
+.sec-blue .article-content blockquote { color: #ffffff !important; }
+.sec-blue .article-content blockquote { border-left-color: var(--antique-gold-hover) !important; }
+
+.sec-gold .article-content,
+.sec-gold .article-content p,
+.sec-gold .article-content li,
+.sec-gold .article-content strong { color: var(--text-dark) !important; }
+.sec-gold .article-content h2,
+.sec-gold .article-content blockquote { color: var(--antique-gold) !important; }
+.sec-gold .article-content blockquote { border-left-color: var(--antique-gold) !important; }
+
+/* Define white cards against the white section background */
+.sec-gold .process-card,
+.sec-gold .blog-card {
+    border-color: rgba(48, 73, 97, 0.14) !important;
+    box-shadow: 0 14px 34px rgba(48, 73, 97, 0.07);
+}
+
+/* Accessibility: honor reduced-motion — collapse all motion to static */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+    .line-grid-overlay,
+    .aurora-layer::after { animation: none !important; }
+    .gs-fade,
+    .gs-fade-up > * { opacity: 1 !important; transform: none !important; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   STAGE-3 POLISH — focus, balance, contrast
+   ═══════════════════════════════════════════════════════ */
+/* Skip-to-content link (visible only on keyboard focus) */
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    z-index: 1000;
+    background: var(--section-blue);
+    color: #fff;
+    padding: 0.7rem 1.25rem;
+    border-radius: 4px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+.skip-link:focus { top: 1rem; outline: 2px solid var(--antique-gold-hover); outline-offset: 2px; }
+
+/* Visible keyboard focus across all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.faq-question:focus-visible {
+    outline: 2px solid var(--antique-gold-hover);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+/* On blue sections the gold ring can wash out — use a brighter offset */
+.sec-blue a:focus-visible,
+.sec-blue button:focus-visible,
+.faq-half .faq-question:focus-visible {
+    outline-color: #f0d27a;
+}
+
+/* Even line breaks on display headings; tidy prose */
+h1, h2, h3, .display-quote { text-wrap: balance; }
+p { text-wrap: pretty; }
+
+/* AA contrast: small GOLD text on WHITE sections uses the deep gold ramp.
+   (#b38b3a on white is ~3:1 — fine for large headings, fails for small labels.) */
+.sec-gold .section-header .tamil-sub,
+.sec-gold .text-center-panel .tamil-sub,
+.sec-gold .split-text .tamil-sub { color: var(--gold-deep) !important; }
+.sec-gold .read-more { color: var(--gold-deep) !important; }
 
 /* Layout Utilities */
 .container { 
@@ -170,8 +307,10 @@ h2 {
 
 .corner-kolam {
     position: absolute;
-    width: 250px;
-    height: 250px;
+    /* Fluid size: shrinks on narrow screens so opposite corners never overlap
+       (was a fixed 250px, which collided in the middle on phones). */
+    width: clamp(96px, 22vw, 250px);
+    height: clamp(96px, 22vw, 250px);
     pointer-events: none;
     z-index: 5;
     opacity: 0.15;
@@ -243,6 +382,102 @@ h2 {
     margin: 0 auto 1.5rem auto;
     display: block;
     filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+}
+
+/* ═══════════════════════════════════════════════════════
+   TAMIL CULTURE MOTIFS (poikkal kuthirai, thombai, kuthuvilakku,
+   kalasam, sangu+mani, mayil/peacock, mango-lotus border)
+   ═══════════════════════════════════════════════════════ */
+/* Symmetrical side accents that flank a section */
+.motif-side {
+    position: absolute;
+    /* Anchored to the bottom corners of the section so the lamps frame the
+       edges instead of floating over the middle cards. */
+    bottom: 0;
+    width: 130px;
+    height: auto;
+    opacity: 0.8;
+    z-index: 0; /* sit behind the opaque cards; show only in the corner gutters */
+    pointer-events: none;
+    filter: drop-shadow(0 10px 16px rgba(0,0,0,0.18));
+}
+.motif-side.left { left: 2.5%; }
+.motif-side.right { right: 2.5%; transform: scaleX(-1); }
+
+/* In every section that uses corner motifs, lift the content container above
+   the lamp so the opaque cards/images hide it, leaving the lamp visible only in
+   the corners/gutters (applies to How It Works, Who We Build For, services.html). */
+.section:has(> .motif-side) > .container { position: relative; z-index: 1; }
+
+/* Thombai festival hangings that drop from the top edge */
+.thombai-hang {
+    position: absolute;
+    top: 0;
+    width: 74px;
+    height: auto;
+    opacity: 0.9;
+    z-index: 6;
+    pointer-events: none;
+}
+.thombai-hang.left { left: 4%; }
+.thombai-hang.right { right: 4%; transform: scaleX(-1); }
+
+/* Centered mango-lotus border used as an ornamental divider */
+.motif-divider {
+    display: block;
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    margin: 2rem auto 0;
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+/* Full-width embroidered mango-lotus band (ornamental section divider) */
+.motif-band {
+    width: 100%;
+    height: 150px;
+    background-image: url('images/mango-lotus-border.png');
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: auto 100%;
+    opacity: 0.9;
+    pointer-events: none;
+}
+@media (max-width: 600px) {
+    .motif-band { height: 90px; }
+}
+
+/* Faint large watermark behind a section's content */
+.motif-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    max-width: 460px;
+    height: auto;
+    opacity: 0.07;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Small emblem shown above a section heading */
+.motif-emblem {
+    display: block;
+    width: 92px;
+    height: auto;
+    margin: 0 auto 1rem;
+    opacity: 0.9;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.14));
+}
+
+@media (max-width: 900px) {
+    .motif-side { width: 80px; opacity: 0.5; }
+    .thombai-hang { width: 50px; opacity: 0.7; }
+}
+@media (max-width: 600px) {
+    .motif-side, .thombai-hang { display: none; }
 }
 
 .mt-4 { margin-top: 2rem; }
@@ -573,25 +808,27 @@ h2 {
 }
 
 .line-grid-overlay {
-    position: absolute; 
-    inset: 0; 
-    z-index: 5; 
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     pointer-events: none;
-    background-image: url('images/hero_ornate_bg_4k.png');
-    background-size: cover;
+    /* Blue-velvet ornate heritage hero image — zoomed in 80% past full-bleed */
+    background-image: url('images/hero_ornate_bg_new.jpg');
+    background-size: 180% auto;
     background-position: center;
-    /* Removed blend mode and opacity so the exact image is clearly visible */
-    opacity: 0.85; /* Slightly lowered opacity to ensure the gold text still pops */
-    animation: luxuryBreathe 25s ease-in-out infinite alternate;
+    background-repeat: no-repeat;
+    background-color: #16233c; /* velvet navy fill behind the contained image */
+    opacity: 0.95;
+    animation: luxuryBreathe 28s ease-in-out infinite alternate;
     transform-origin: center;
 }
 
 @keyframes luxuryBreathe {
     0% {
-        transform: scale(1);
+        transform: scale(1.0);
     }
     100% {
-        transform: scale(1.08);
+        transform: scale(1.02);
     }
 }
 
@@ -600,41 +837,30 @@ h2 {
     to { background-position: 250% 50%, 250% 50%; }
 }
 
-.hero-content-wrapper { 
-    position: relative; 
-    z-index: 10; 
-    max-width: 960px; 
-    padding: 0 2.5rem; 
+.hero-content-wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 960px;
+    padding: 0 2.5rem;
 }
 
-.hero-content-wrapper h1.hero-title-dark { 
-    font-size: 5rem; 
-    line-height: 1.1; 
-    margin-bottom: 1.5rem; 
-    letter-spacing: 0.01em;
-    font-weight: 600;
-    filter: drop-shadow(0px 2px 5px rgba(255, 255, 255, 0.4));
-    
-    /* Blue Shimmer Color Animation */
-    background-image: linear-gradient(-45deg, #122135 0%, #122135 35%, #4a75a8 50%, #122135 65%, #122135 100%);
-    background-size: 200% auto;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: blueShimmerFlow 4s linear infinite;
-}
-
-@keyframes blueShimmerFlow {
-    to {
-        background-position: 200% center;
-    }
+.hero-content-wrapper h1.hero-title-dark {
+    font-size: clamp(2.75rem, 6vw, 4.75rem);
+    line-height: 1.08;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+    /* Near-black ink navy: darker than --blue-deep so the title holds up
+       against the busy mandala the hero zoom puts behind it */
+    color: #0d1720 !important;
+    -webkit-text-fill-color: #0d1720;
+    text-wrap: balance;
 }
 
 .blink-cursor {
     font-weight: 300;
-    font-size: 5rem;
-    color: #122135;
+    font-size: clamp(2.75rem, 6vw, 4.75rem);
+    color: var(--gold);
     animation: blink 1s step-end infinite;
 }
 
@@ -645,10 +871,11 @@ h2 {
 
 /* Light text for subheadline */
 .changing-text-container.light-text .changing-text {
-    color: #F8F4E6; /* Light ivory text */
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    color: #0d1720; /* Matches the hero headline ink for a single dark voice */
+    text-shadow: none;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    letter-spacing: 0.03em;
 }
 
 /* Gold Stamp Button (Main CTA) */
@@ -785,8 +1012,8 @@ h2 {
 /* ═══════════════════════════════════════════════════════
    SECTIONS - Temple Chamber Spacing
    ═══════════════════════════════════════════════════════ */
-.section { padding: 9rem 0; }
-.section-header.center { text-align: center; margin-bottom: 5rem; }
+.section { padding: clamp(5rem, 10vw, 9rem) 0; }
+.section-header.center { text-align: center; margin-bottom: clamp(3rem, 6vw, 5rem); }
 
 /* Gold ornamental divider for section headers */
 .section-header.center h2::after {
@@ -1042,9 +1269,9 @@ h2 {
     grid-template-columns: 1fr 1fr; 
 }
 
-.faq-half { 
-    background-color: var(--deep-teal); 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero_temple.png');
+.faq-half {
+    background-color: var(--section-blue);
+    background-image: linear-gradient(rgba(36, 55, 72, 0.78), rgba(36, 55, 72, 0.82)), url('images/hero_temple.png');
     background-size: cover;
     /* Adjusted from 'center' to nudge the temple horizontally into the perfect middle. 
        You can tweak this percentage (e.g., 40% or 60%) to shift it left or right. */
@@ -1939,3 +2166,56 @@ select.elegant-input {
 .ds-accordion-content { display: none; padding: 2.5rem; background: var(--white); }
 .ds-accordion-header.active + .ds-accordion-content { display: block; }
 
+
+
+/* ── Sticky brand bar ──────────────────────────────────────── */
+/* Solid slate-blue bar so the logo reads on every page, and stays
+   pinned while scrolling. Inner pages use position:sticky inline so
+   they keep their place in the flow; index.html overlays the hero. */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0.7rem 3rem;
+    background-color: rgba(35, 55, 71, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(179, 139, 58, 0.5);
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Nav bar is dark on every page now, so links are always light. */
+.navbar .nav-links a:not(.btn-primary-sm),
+.navbar.navbar-light-text .nav-links a:not(.btn-primary-sm) {
+    color: #F8F4E6;
+}
+
+.navbar .menu-toggle span {
+    background-color: #F8F4E6;
+}
+
+/* ── Brand logo lockup ─────────────────────────────────────── */
+.logo-img {
+    height: 72px;
+    width: auto;
+    display: block;
+}
+
+.footer-logo-img {
+    height: 92px;
+    width: auto;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.art-footer-logo .footer-logo-img {
+    margin: 0 auto 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .navbar { padding: 0.6rem 1.25rem; }
+    .logo-img { height: 50px; }
+    .footer-logo-img { height: 68px; }
+}

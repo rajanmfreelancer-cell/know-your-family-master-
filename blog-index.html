@@ -3,12 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stories & Insights | Know Your Family</title>
-    <meta name="description" content="Explore compelling stories of Tamil migration, cultural heritage, and family preservation. Read curated editorials from Know Your Family.">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/kyf-favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/kyf-favicon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/kyf-favicon-180.png">
+    <title>Tamil Heritage Stories & Family History Blog | Know Your Family</title>
+    <meta name="description" content="Stories on Tamil heritage, migration history, genealogy, culture and identity for the Tamil diaspora. Learn to trace your roots and preserve your family legacy.">
+    <link rel="canonical" href="https://knowurfamily.com/blog-index.html">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#304961">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Know Your Family">
+    <meta property="og:title" content="Tamil Heritage Stories & Family History Blog | Know Your Family">
+    <meta property="og:description" content="Stories on Tamil heritage, migration history, genealogy, culture and identity for the Tamil diaspora. Learn to trace your roots and preserve your family legacy.">
+    <meta property="og:url" content="https://knowurfamily.com/blog-index.html">
+    <meta property="og:image" content="https://knowurfamily.com/images/blog_identity.png">
+    <meta property="og:locale" content="en_MY">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tamil Heritage Stories & Family History Blog | Know Your Family">
+    <meta name="twitter:description" content="Stories on Tamil heritage, migration history, genealogy, culture and identity for the Tamil diaspora. Learn to trace your roots and preserve your family legacy.">
+    <meta name="twitter:image" content="https://knowurfamily.com/images/blog_identity.png">
+
+    <!-- JSON-LD: CollectionPage + ItemList + BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://knowurfamily.com/blog-index.html#webpage",
+          "url": "https://knowurfamily.com/blog-index.html",
+          "name": "Tamil Heritage Stories & Family History Blog | Know Your Family",
+          "description": "Stories on Tamil heritage, migration history, genealogy, culture and identity for the Tamil diaspora. Learn to trace your roots and preserve your family legacy.",
+          "inLanguage": "en-MY",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "Know Your Family",
+            "url": "https://knowurfamily.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Know Your Family",
+            "url": "https://knowurfamily.com/",
+            "logo": "https://knowurfamily.com/images/heritage_book_premium.png"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://knowurfamily.com/blog-index.html#storylist",
+          "name": "Tamil Heritage Stories",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://knowurfamily.com/blog.html",
+              "name": "The Story of Tamil Migration to Southeast Asia"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://knowurfamily.com/blog.html",
+              "name": "How to Trace Your Ancestral Village in Tamil Nadu"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://knowurfamily.com/blog.html",
+              "name": "Kuladeivam: Finding and Honouring Your Family Deity"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "url": "https://knowurfamily.com/blog.html",
+              "name": "Why Family Names Change Across Generations in the Diaspora"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "url": "https://knowurfamily.com/blog.html",
+              "name": "Why Younger Generations Are Losing Touch With Their Roots"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "url": "https://knowurfamily.com/blog.html",
+              "name": "What Your Family History Reveals About Your Identity"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://knowurfamily.com/blog-index.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://knowurfamily.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Stories",
+              "item": "https://knowurfamily.com/blog-index.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Tiro+Tamil:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=3">
     <style>
         /* ═══ BLOG INDEX - LUXURY STYLES ═══ */
 
@@ -18,7 +128,7 @@
             padding: 9rem 2rem 7rem;
             text-align: center;
             overflow: hidden;
-            background: linear-gradient(160deg, #f7f5f0 0%, #ffffff 40%, #faf8f5 70%, #f7f5f0 100%);
+            background: linear-gradient(160deg, #304961 0%, #284057 50%, #304961 100%);
         }
 
         .blog-hero::before {
@@ -66,7 +176,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 4.5rem;
             font-weight: 700;
-            color: #122135;
+            color: #ffffff;
             line-height: 1.1;
             margin-bottom: 1rem;
         }
@@ -76,13 +186,13 @@
             font-style: italic;
             font-weight: 400;
             font-size: 2.2rem;
-            color: #a48239;
+            color: #e8c25a;
             margin-top: 0.5rem;
         }
 
         .blog-hero-desc {
             font-size: 1.1rem;
-            color: rgba(18, 33, 53, 0.7);
+            color: rgba(255, 255, 255, 0.8);
             max-width: 550px;
             margin: 0 auto;
             line-height: 1.7;
@@ -586,8 +696,8 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar" style="position: static; background: var(--background); border-bottom: 1px solid var(--parchment-dark);">
-        <a href="index.html" class="logo" style="text-decoration: none; color: var(--primary);">Know Your Family</a>
+    <nav class="navbar" style="position: sticky; top: 0;">
+        <a href="index.html" class="logo" style="text-decoration: none; color: var(--primary);"><img src="images/kyf-logo-circle.png" srcset="images/kyf-logo-circle.png 1x, images/kyf-logo-circle@2x.png 2x" alt="Know Your Family" class="logo-img"></a>
         <div class="menu-toggle"><span></span><span></span><span></span></div>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -600,9 +710,12 @@
     </nav>
 
     <!-- ═══ HERO ═══ -->
-    <section class="blog-hero" style="background: #2C4257;">
-        <h1 style="color: #ffffff;">Stories & Insights <span style="color: #d4af37;">Voices of Tamil Heritage</span></h1>
-        <p class="blog-hero-desc" style="color: rgba(255,255,255,0.85);">Exploring centuries of migration, culture, identity, and the art of preserving family legacies.</p>
+    <section class="blog-hero" style="background: var(--section-blue); position: relative; overflow: hidden;">
+        <img src="images/thombai.png" class="thombai-hang left" alt="Thombai Temple Hanging" loading="lazy">
+        <img src="images/thombai.png" class="thombai-hang right" alt="Thombai Temple Hanging" loading="lazy">
+        <img src="images/sangu-mani.png" class="motif-emblem" style="width: 150px; opacity: 0.95;" alt="Conch and Bell" loading="lazy">
+        <h1 style="color: #ffffff;">Tamil Heritage Stories <span style="color: #d4af37;">கதைகள் &middot; Roots, Memory &amp; Identity</span></h1>
+        <p class="blog-hero-desc" style="color: rgba(255,255,255,0.85);">Editorial journeys through Tamil migration history, family genealogy, and living culture, written for the diaspora who want to trace their roots and pass them on.</p>
         <div class="blog-hero-divider">
             <span></span>
             <div class="dot"></div>
@@ -612,13 +725,24 @@
         </div>
     </section>
 
+    <!-- Ornamental embroidered band -->
+    <div class="motif-band" role="presentation" aria-hidden="true"></div>
+
     <!-- ═══ CATEGORIES ═══ -->
-    <div class="blog-categories">
-        <a href="#" class="cat-pill active">All Stories</a>
-        <a href="#" class="cat-pill">Tamil Migration</a>
-        <a href="#" class="cat-pill">Cultural Traditions</a>
-        <a href="#" class="cat-pill">Preservation Tips</a>
-        <a href="#" class="cat-pill">Family Stories</a>
+    <nav class="blog-categories" aria-label="Story categories">
+        <a href="#latest-stories" class="cat-pill active">All</a>
+        <a href="#latest-stories" class="cat-pill">Migration</a>
+        <a href="#latest-stories" class="cat-pill">Genealogy</a>
+        <a href="#latest-stories" class="cat-pill">Culture</a>
+        <a href="#latest-stories" class="cat-pill">Identity</a>
+        <a href="#latest-stories" class="cat-pill">Preservation</a>
+    </nav>
+
+    <!-- ═══ SEO INTRO ═══ -->
+    <div class="blog-intro" style="max-width: 760px; margin: 2.5rem auto 0; padding: 0 2rem; text-align: center;">
+        <p style="font-family: 'Outfit', sans-serif; font-size: 1.02rem; line-height: 1.85; color: var(--text-muted);">
+            This is where the Tamil diaspora comes to understand where they came from. Our stories trace the migration of Tamil families across the Indian Ocean to Malaysia and beyond, explain how to research your genealogy and ancestral village, and explore the customs, language, and beliefs that still shape who we are. Whether you are documenting your grandparents' memories or starting to map your family tree, you will find practical guidance and cultural context here, told with care for the heritage behind every name.
+        </p>
     </div>
 
     <!-- ═══ BLOG LISTING ═══ -->
@@ -639,13 +763,13 @@
                     <span>June 2026</span>
                 </div>
                 <h2 class="featured-title">The Story of Tamil Migration to Southeast Asia</h2>
-                <p class="featured-excerpt">Discover the historical waves that brought our ancestors across the Indian Ocean — from Chola trade routes to colonial-era labor migration and the modern diaspora.</p>
+                <p class="featured-excerpt">Discover the historical waves that brought our ancestors across the Indian Ocean, from Chola trade routes to colonial-era labour migration and the modern diaspora.</p>
                 <span class="featured-readmore">Read Full Story →</span>
             </div>
         </a>
 
         <!-- Grid Header -->
-        <div class="posts-grid-header">
+        <div class="posts-grid-header" id="latest-stories">
             <h2>Latest Stories</h2>
             <div class="line"></div>
         </div>
@@ -655,12 +779,42 @@
 
             <a href="blog.html" class="post-card fade-up">
                 <div class="post-card-img">
-                    <img src="images/blog_generations.png" alt="Generations" loading="lazy">
+                    <img src="images/blog_migration.png" alt="Map of Tamil Nadu villages" loading="lazy">
                 </div>
                 <div class="post-card-body">
-                    <span class="post-card-cat">Preservation Tips</span>
-                    <h3 class="post-card-title">Why Younger Generations Are Losing Touch With Their Roots</h3>
-                    <p class="post-card-excerpt">And what we can do to bridge the cultural gap before living memories fade into silence.</p>
+                    <span class="post-card-cat">Genealogy</span>
+                    <h3 class="post-card-title">How to Trace Your Ancestral Village in Tamil Nadu</h3>
+                    <p class="post-card-excerpt">A practical guide to working back from a family surname and oral memory to the village your line came from.</p>
+                    <div class="post-card-footer">
+                        <span class="post-card-date">June 2026</span>
+                        <span class="post-card-readmore">Read →</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="blog.html" class="post-card fade-up">
+                <div class="post-card-img">
+                    <img src="images/tamil_courtyard_bright.png" alt="Traditional Tamil home courtyard" loading="lazy">
+                </div>
+                <div class="post-card-body">
+                    <span class="post-card-cat">Culture</span>
+                    <h3 class="post-card-title">Kuladeivam: Finding and Honouring Your Family Deity</h3>
+                    <p class="post-card-excerpt">What a <span lang="ta">குலதெய்வம்</span> is, why it anchors a family line, and how to rediscover yours.</p>
+                    <div class="post-card-footer">
+                        <span class="post-card-date">June 2026</span>
+                        <span class="post-card-readmore">Read →</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="blog.html" class="post-card fade-up">
+                <div class="post-card-img">
+                    <img src="images/blog_identity.png" alt="Family names across generations" loading="lazy">
+                </div>
+                <div class="post-card-body">
+                    <span class="post-card-cat">Identity</span>
+                    <h3 class="post-card-title">Why Family Names Change Across Generations in the Diaspora</h3>
+                    <p class="post-card-excerpt">From patronymics to colonial spellings, how Tamil names shifted abroad and what that means for your research.</p>
                     <div class="post-card-footer">
                         <span class="post-card-date">May 2026</span>
                         <span class="post-card-readmore">Read →</span>
@@ -670,10 +824,40 @@
 
             <a href="blog.html" class="post-card fade-up">
                 <div class="post-card-img">
-                    <img src="images/blog_identity.png" alt="Identity" loading="lazy">
+                    <img src="images/heritage_book_premium.png" alt="Recording an elder's memories" loading="lazy">
                 </div>
                 <div class="post-card-body">
-                    <span class="post-card-cat">Cultural Traditions</span>
+                    <span class="post-card-cat">Preservation</span>
+                    <h3 class="post-card-title">Preserving Grandparents' Stories Before They Fade</h3>
+                    <p class="post-card-excerpt">Simple questions, recording methods, and habits that capture a generation's memory while there is still time.</p>
+                    <div class="post-card-footer">
+                        <span class="post-card-date">May 2026</span>
+                        <span class="post-card-readmore">Read →</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="blog.html" class="post-card fade-up">
+                <div class="post-card-img">
+                    <img src="images/blog_generations.png" alt="Generations of a Tamil family" loading="lazy">
+                </div>
+                <div class="post-card-body">
+                    <span class="post-card-cat">Preservation</span>
+                    <h3 class="post-card-title">Why Younger Generations Are Losing Touch With Their Roots</h3>
+                    <p class="post-card-excerpt">And what we can do to bridge the cultural gap before living memories fade into silence.</p>
+                    <div class="post-card-footer">
+                        <span class="post-card-date">April 2026</span>
+                        <span class="post-card-readmore">Read →</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="blog.html" class="post-card fade-up">
+                <div class="post-card-img">
+                    <img src="images/blog_identity.png" alt="Tamil cultural identity" loading="lazy">
+                </div>
+                <div class="post-card-body">
+                    <span class="post-card-cat">Identity</span>
                     <h3 class="post-card-title">What Your Family History Reveals About Your Identity</h3>
                     <p class="post-card-excerpt">How ancestral stories shape our modern sense of self, belonging, and purpose.</p>
                     <div class="post-card-footer">
@@ -683,23 +867,15 @@
                 </div>
             </a>
 
-            <div class="post-card post-card-coming fade-up">
-                <div class="coming-inner">
-                    <div class="coming-icon">✦</div>
-                    <h3 class="coming-title">More Stories Coming</h3>
-                    <p class="coming-desc">New heritage stories and family chronicles are being curated and will be published soon.</p>
-                </div>
-            </div>
-
         </div>
     </main>
 
     <!-- ═══ CTA SECTION ═══ -->
     <section class="blog-cta">
         <div class="blog-cta-inner">
-            <h2>Preserve Your Story</h2>
-            <p>Every family has a story worth telling. Let us help you document yours before the memories fade.</p>
-            <a href="data-sheet.html" class="cta-btn">Start Your Heritage Record</a>
+            <h2>Turn These Stories Into Your Own</h2>
+            <p>Reading about Tamil heritage is one thing. Recording yours is another. Share what you know about your family, and our team will help research the gaps and shape it into a heritage book your grandchildren will hold one day.</p>
+            <a href="data-sheet.html" class="cta-btn">Begin Your Family Record</a>
         </div>
     </section>
 
@@ -709,14 +885,8 @@
             <!-- Brand Column -->
             <div class="footer-col brand-col">
                 <div class="footer-logo-container">
-                    <div class="footer-logo-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <polygon points="12,2 22,12 12,22 2,12" />
-                            <circle cx="12" cy="12" r="3" fill="currentColor" />
-                        </svg>
+                        <img src="images/kyf-logo-circle.png" srcset="images/kyf-logo-circle.png 1x, images/kyf-logo-circle@2x.png 2x" alt="Know Your Family" class="footer-logo-img">
                     </div>
-                    <span class="footer-brand-name">Know Your Family</span>
-                </div>
                 <p class="footer-desc">Dedicated to preserving Tamil culture through premium genealogy, personal history, and breathtaking legacy books.</p>
                 <div class="footer-socials">
                     <a href="#" class="social-box" aria-label="Facebook">
@@ -754,9 +924,9 @@
             <div class="footer-col">
                 <h4 class="footer-heading">Connect</h4>
                 <ul class="footer-contact">
-                    <li><a href="tel:18002081405" class="contact-link">1 (800) 208-1405</a></li>
-                    <li><a href="mailto:hello@knowyourfamily.com" class="contact-link">hello@knowyourfamily.com</a></li>
-                    <li class="contact-text">Chennai & Worldwide</li>
+                    <li><a href="tel:+60000000000" class="contact-link">[+60 phone placeholder]</a></li>
+                    <li><a href="mailto:hello@knowurfamily.com" class="contact-link">hello@knowurfamily.com</a></li>
+                    <li class="contact-text">Kuala Lumpur, Malaysia</li>
                 </ul>
             </div>
         </div>

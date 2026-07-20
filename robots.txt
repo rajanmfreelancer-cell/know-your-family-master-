@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+Disallow: /data-sheet.html
+
+Sitemap: https://knowurfamily.com/sitemap.xml

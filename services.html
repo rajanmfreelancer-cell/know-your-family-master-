@@ -3,15 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Know Your Family</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/kyf-favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/kyf-favicon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/kyf-favicon-180.png">
+    <title>Tamil Heritage Book &amp; Genealogy Services | Know Your Family</title>
+    <meta name="description" content="A custom hardcover Tamil heritage book and private digital vault for Malaysian diaspora families. Elder interviews, photo restoration, lineage research. Bilingual.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#304961">
+    <link rel="canonical" href="https://knowurfamily.com/services.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Know Your Family">
+    <meta property="og:title" content="Tamil Heritage Book &amp; Genealogy Services | Know Your Family">
+    <meta property="og:description" content="A custom hardcover Tamil heritage book and private digital vault for Malaysian diaspora families. Elder interviews, photo restoration, lineage research. Bilingual.">
+    <meta property="og:url" content="https://knowurfamily.com/services.html">
+    <meta property="og:image" content="https://knowurfamily.com/images/heritage_book_premium.png">
+    <meta property="og:locale" content="en_MY">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tamil Heritage Book &amp; Genealogy Services | Know Your Family">
+    <meta name="twitter:description" content="A custom hardcover Tamil heritage book and private digital vault for Malaysian diaspora families. Elder interviews, photo restoration, lineage research.">
+    <meta name="twitter:image" content="https://knowurfamily.com/images/heritage_book_premium.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Tiro+Tamil:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <style>
+        /* Page-scoped: allow taller FAQ answers on this page (longer copy) */
+        .faq-item.active .faq-answer { max-height: 460px; }
+        /* Page-scoped: even spacing for the "What Makes It Different" 2-col cards */
+        .sec-blue .grid-2 .process-card p,
+        .sec-blue .grid-3 .process-card p { color: var(--text-muted); }
+    </style>
+
+    <!-- Structured Data: Service + FAQPage + BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://knowurfamily.com/#organization",
+          "name": "Know Your Family",
+          "url": "https://knowurfamily.com/",
+          "logo": "https://knowurfamily.com/images/heritage_book_premium.png",
+          "description": "Premium Tamil heritage documentation service for the Tamil diaspora. We interview elders, restore old family photographs, research lineage, and produce a custom hardcover Heritage Book plus a permanent private digital vault.",
+          "areaServed": { "@type": "Country", "name": "Malaysia" },
+          "sameAs": [
+            "https://www.facebook.com/knowurfamily",
+            "https://www.instagram.com/knowurfamily",
+            "https://www.youtube.com/@knowurfamily"
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://knowurfamily.com/services.html#service",
+          "serviceType": "Tamil heritage book & genealogy documentation",
+          "name": "The Heritage Book Package",
+          "description": "A personalized hardcover Tamil heritage book and private digital vault for Tamil diaspora families in Malaysia. Includes elder interviews, family tree research, ancestral origin and migration stories, photo restoration, member profiles, and bilingual English and Tamil content.",
+          "provider": { "@id": "https://knowurfamily.com/#organization" },
+          "areaServed": { "@type": "Country", "name": "Malaysia" },
+          "audience": {
+            "@type": "Audience",
+            "name": "Tamil diaspora families in Malaysia and South East Asia"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "The Heritage Book Package inclusions",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personalized hardcover heritage book" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family tree across all known generations" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ancestral origin story: village, district, and state in Tamil Nadu" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Migration story to Malaysia" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family traditions, festivals, and customs" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Curated family photos organized by generation" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Individual profiles for each family member" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bilingual English and Tamil content" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Numbered and signed limited edition" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital PDF in a private digital vault" } }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://knowurfamily.com/services.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How long does the Heritage Book Package take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most families receive their finished hardcover book within about eight to twelve weeks of the first interview. Timing depends on family size, how much research the ancestral lineage requires, and how many photographs need restoring. We share a clear schedule with you after the consultation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if our family has very few old photographs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "That is common, and it is not a problem. The story carries the book. We build it around the memories your elders share, then add historical and cultural context about the ancestral village and the migration to Malaya. Any photographs you do have are restored and given pride of place."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is the book really in both English and Tamil?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Every Heritage Book is bilingual. Names, places, customs, and the narrative are presented in English and Tamil so that elders can read it in their mother tongue and younger, English-first generations can read it too. We conduct interviews in whichever language your family is most comfortable speaking."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you deliver the book within Malaysia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We are based in Kuala Lumpur and deliver across Malaysia. We can also ship to family members elsewhere in South East Asia and beyond, so relatives in other countries can hold the same book."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the private digital vault?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Alongside the printed book, you receive a private digital vault: a secure online space holding the high-resolution PDF of your book and your restored photographs. It means the work is never lost, and it can be shared with family living anywhere in the world."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does the Heritage Book Package cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Every book is bespoke, so each is quoted individually based on the size of your family and the depth of historical research involved. After a short consultation we send a clear, itemized quote with no obligation. Request a custom quote through our contact page to begin."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://knowurfamily.com/services.html#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://knowurfamily.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://knowurfamily.com/services.html" }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
-    <nav class="navbar" style="position: static; background: var(--background); border-bottom: 1px solid rgba(47, 133, 90,0.1);">
-        <a href="index.html" class="logo">Know Your Family</a>
+    <nav class="navbar" style="position: sticky; top: 0;">
+        <a href="index.html" class="logo"><img src="images/kyf-logo-circle.png" srcset="images/kyf-logo-circle.png 1x, images/kyf-logo-circle@2x.png 2x" alt="Know Your Family" class="logo-img"></a>
         <div class="menu-toggle"><span></span><span></span><span></span></div>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -25,52 +169,240 @@
 
     <main>
         <!-- Hero -->
-        <section class="section-book" style="padding: 6rem 0; background-color: #2C4257;">
+        <section class="section-book" style="padding: 6rem 0; background-color: var(--section-blue); position: relative; overflow: hidden;">
+            <img src="images/thombai.png" class="thombai-hang left" alt="Thombai Temple Hanging" loading="lazy">
+            <img src="images/thombai.png" class="thombai-hang right" alt="Thombai Temple Hanging" loading="lazy">
             <div class="container text-center-panel gs-fade">
-                <span class="tamil-sub" style="color: #d4af37;">எங்கள் சேவைகள்</span>
-                <h1 class="page-title" style="color: #ffffff; margin-top: 1rem;">Our Services</h1>
-                <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.2rem; max-width: 600px; margin: 1rem auto 0;">The complete package to document and preserve your family's heritage forever.</p>
+                <img src="images/mayil.png" class="motif-emblem" style="width: 130px; opacity: 0.95;" alt="Peacock Motif" loading="lazy">
+                <span class="tamil-sub" lang="ta" style="color: #d4af37;">எங்கள் சேவைகள்</span>
+                <h1 class="page-title" style="color: #ffffff; margin-top: 1rem;">The Heritage Book Package</h1>
+                <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.2rem; max-width: 640px; margin: 1rem auto 0;">One complete service that turns your family's memories into a hardcover Tamil heritage book and a private digital vault. In print. Online. For the generations after you.</p>
             </div>
         </section>
-        
+
+        <!-- Ornamental embroidered band -->
+        <div class="motif-band" role="presentation" aria-hidden="true"></div>
+
         <!-- The Heritage Book Package Details -->
-        <section class="section bg-base">
-            <div class="container split-layout">
-                <div class="split-img gs-fade">
-                    <img src="images/heritage_book_premium.png" alt="The Heritage Book Package" class="rounded-img shadow-lg" loading="lazy">
+        <section class="section bg-base sec-gold" style="position: relative; overflow: hidden;">
+            <img src="images/kuthuvilakku.png" class="motif-side left" alt="Kuthuvilakku Lamp" loading="lazy">
+            <img src="images/kuthuvilakku.png" class="motif-side right" alt="Kuthuvilakku Lamp" loading="lazy">
+            <div class="container">
+                <div class="gs-fade" style="max-width: 900px; margin: 0 auto; text-align: center;">
+                    <span class="tamil-sub" lang="ta">பாரம்பரிய புத்தகத் தொகுப்பு</span>
+                    <h2>What Is Inside the Package</h2>
+                    <p class="text-muted mt-4 mb-4" style="font-size: 1.1rem;">Everything below is included in one flagship package, grouped into four parts: your Lineage, your Story, the Heirloom we print, and the Vault that keeps it safe forever.</p>
                 </div>
-                <div class="split-text gs-fade">
-                    <h2>The Heritage Book Package</h2>
-                    <p class="text-muted mt-4 mb-4" style="font-size: 1.1rem;">A comprehensive journey from the first interview to the final, physical masterpiece. Here is everything included in our flagship package:</p>
-                    
-                    <ul class="check-list">
-                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> Personalized hardcover heritage book</li>
-                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> Family tree illustration across all known generations</li>
-                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> Origin story — ancestral village, district, and state in Tamil Nadu</li>
-                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> Migration story — how and when your family came to Malaysia</li>
-                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> Family traditions, festivals, and customs</li>
-                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> Curated family photos organized by generation</li>
-                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> Individual profiles for each family member</li>
-                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> Bilingual content — English and Tamil</li>
-                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> Numbered and signed edition — Family Heritage Book No. 001</li>
-                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> Digital PDF copy stored in your private vault forever</li>
+
+                <div class="gs-fade" style="max-width: 1000px; margin: 0 auto;">
+                    <ul class="check-list" style="text-align: left;">
+                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> <strong>Lineage.</strong> A family tree across every generation you can name, plus an individual profile for each member so no one is reduced to a single line on a chart.</li>
+                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> <strong>Origin.</strong> Your ancestral origin story traced to the village, district, and state in Tamil Nadu your family came from, and the migration story of how and when they reached Malaya.</li>
+                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> <strong>Story.</strong> The traditions, festivals, and customs your family keeps, written down so they are remembered and not just repeated.</li>
+                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> <strong>Photos.</strong> Your family photographs restored and curated generation by generation, so faces are recognized long after the people are gone.</li>
+                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> <strong>Bilingual.</strong> Every page in English and Tamil, so elders read it in their mother tongue and the youngest read it in theirs.</li>
+                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> <strong>Heirloom.</strong> A personalized hardcover book, produced as a numbered and signed edition built to be handled, read aloud, and handed down.</li>
+                        <li><span class="check-pill" style="background: var(--primary); color: var(--background);">✓</span> <strong>Vault.</strong> A high-resolution digital PDF kept in your own private digital vault, so the book and its photographs are never lost and can reach family anywhere in the world.</li>
                     </ul>
+
+                    <div style="margin-top: 2.5rem; text-align: center;">
+                        <a href="contact.html" class="btn-primary">Request a Custom Quote</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing Tiers Placeholder -->
-        <section class="section bg-white" style="text-align: center; padding: 6rem 0; border-top: 1px solid rgba(47, 133, 90,0.1);">
-            <div class="container gs-fade">
-                <h2 style="color: var(--primary);">Pricing & Tiers</h2>
-                <p class="text-muted" style="max-width: 600px; margin: 1rem auto 2rem;">We are currently finalizing our custom tiered packages to suit different family sizes and historical depths. Contact us for a bespoke quote today.</p>
-                
-                <div style="padding: 4rem; border: 2px dashed rgba(47, 133, 90,0.2); border-radius: var(--border-radius-lg); background: var(--background);">
-                    <h3 style="color: var(--secondary); font-family: 'Outfit', sans-serif;">[ Pricing Packages Coming Soon ]</h3>
+        <!-- Our Process -->
+        <section class="section bg-white sec-blue" style="position: relative; overflow: hidden;">
+            <div class="container">
+                <div class="section-header center gs-fade">
+                    <span class="tamil-sub" lang="ta">எங்கள் பயணம்</span>
+                    <h2>Our Process</h2>
+                    <p class="text-muted" style="max-width: 640px; margin: 1rem auto 0;">A clear path from the first conversation to the book in your hands. You are part of it at every step.</p>
                 </div>
-                
-                <div style="margin-top: 4rem;">
-                    <a href="contact.html" class="btn-primary">Request a Custom Quote</a>
+
+                <div class="process-grid">
+                    <div class="process-card gs-fade">
+                        <div class="step-num">Step 01</div>
+                        <h3>Consultation</h3>
+                        <p>We start with a relaxed conversation about your family, what you already know, and what you hope to preserve. We agree on scope, who we will speak to, and what the finished book should hold.</p>
+                    </div>
+                    <div class="process-card gs-fade">
+                        <div class="step-num">Step 02</div>
+                        <h3>Elder Interviews</h3>
+                        <p>We sit with your elders, in Tamil or English, and record the stories only they can tell. Names, the ancestral village, the crossing to Malaya, and the small everyday memories that hold a family together.</p>
+                    </div>
+                    <div class="process-card gs-fade">
+                        <div class="step-num">Step 03</div>
+                        <h3>Photo Archiving &amp; Restoration</h3>
+                        <p>We carefully scan your old photographs and documents, then restore the faded, creased, and torn ones. Each is dated, labelled, and organized by generation for the book and the vault.</p>
+                    </div>
+                    <div class="process-card gs-fade">
+                        <div class="step-num">Step 04</div>
+                        <h3>Research &amp; Writing</h3>
+                        <p>We verify names and places, fill gaps with historical context about your district in Tamil Nadu, and write your origin and migration stories as proper narrative, in English and Tamil.</p>
+                    </div>
+                    <div class="process-card gs-fade">
+                        <div class="step-num">Step 05</div>
+                        <h3>Design &amp; Print</h3>
+                        <p>Our designers lay out the family tree, profiles, and restored photographs into a custom hardcover book, then produce it on archival-quality paper as a numbered and signed edition.</p>
+                    </div>
+                    <div class="process-card gs-fade">
+                        <div class="step-num">Step 06</div>
+                        <h3>Delivery &amp; Vault</h3>
+                        <p>We deliver your finished book across Malaysia and set up your private digital vault, holding the high-resolution PDF and restored images so the work is safe and shareable forever.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who It's For -->
+        <section class="section bg-base sec-gold" style="position: relative; overflow: hidden;">
+            <img src="images/kuthuvilakku.png" class="motif-side left" alt="" aria-hidden="true" loading="lazy">
+            <img src="images/kuthuvilakku.png" class="motif-side right" alt="" aria-hidden="true" loading="lazy">
+            <div class="container">
+                <div class="section-header center gs-fade">
+                    <span class="tamil-sub" lang="ta">யாருக்காக</span>
+                    <h2>Who It's For</h2>
+                    <p class="text-muted" style="max-width: 640px; margin: 1rem auto 0;">Built for Tamil families in the diaspora who do not want their history to end with the people who remember it.</p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="process-card gs-fade">
+                        <h3>Families in the Diaspora</h3>
+                        <p class="text-muted">Tamil families settled in Malaysia and across South East Asia who want their roots in Tamil Nadu and their journey to Malaya recorded properly, in one place, in both languages.</p>
+                    </div>
+                    <div class="process-card gs-fade">
+                        <h3>Elders With Stories to Pass Down</h3>
+                        <p class="text-muted">Grandparents and parents who carry the names, the village, and the customs, and want them written down for their children and grandchildren before the memories fade.</p>
+                    </div>
+                    <div class="process-card gs-fade">
+                        <h3>Younger Generations Reconnecting</h3>
+                        <p class="text-muted">Second and third-generation members who grew up English-first and want to understand where they come from, and a keepsake to hand to their own children one day.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Makes It Different -->
+        <section class="section bg-white sec-blue" style="position: relative; overflow: hidden;">
+            <div class="container">
+                <div class="section-header center gs-fade">
+                    <span class="tamil-sub" lang="ta">எங்கள் தனித்துவம்</span>
+                    <h2>What Makes It Different</h2>
+                    <p class="text-muted" style="max-width: 640px; margin: 1rem auto 0;">Not a generic family-tree printout. A culturally faithful Tamil heritage book, made to last.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="process-card gs-fade">
+                        <h3>Genuinely Bilingual</h3>
+                        <p>Every book is crafted in English and Tamil together, not machine-translated as an afterthought. Names, places, and customs read correctly in both, so no generation is left out.</p>
+                    </div>
+                    <div class="process-card gs-fade">
+                        <h3>Culturally Specific</h3>
+                        <p>We document the details that matter to Tamil families, from your gothram and ancestral village to your kuladeivam, recorded with the care and accuracy they deserve.</p>
+                    </div>
+                    <div class="process-card gs-fade">
+                        <h3>Archival-Quality Printing</h3>
+                        <p>Produced as a numbered and signed hardcover on archival-quality paper, made to be read aloud at gatherings and handed down rather than tucked away in a drawer.</p>
+                    </div>
+                    <div class="process-card gs-fade">
+                        <h3>A Permanent Digital Vault</h3>
+                        <p>Your private digital vault keeps the high-resolution book and restored photographs safe and shareable, so relatives anywhere in the world can hold the same history.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing & Tiers -->
+        <section class="section bg-base sec-gold" style="position: relative; overflow: hidden;">
+            <div class="container">
+                <div class="section-header center gs-fade">
+                    <span class="tamil-sub" lang="ta">விலை விவரம்</span>
+                    <h2>Pricing &amp; Tiers</h2>
+                </div>
+                <div class="gs-fade" style="max-width: 760px; margin: 0 auto; text-align: center;">
+                    <p class="text-muted" style="font-size: 1.1rem;">Every Heritage Book is bespoke, so we do not sell fixed packages off a shelf. Your quote is built around two things: the size of your family and the depth of historical research your lineage calls for. A grandparent and three generations of one household is a different undertaking from a wide family spanning many branches and decades of records.</p>
+                    <p class="text-muted" style="font-size: 1.1rem; margin-top: 1.5rem;">After a short, no-obligation consultation, we send a clear and itemized quote in Malaysian Ringgit, so you know exactly what is included before anything begins. Whatever the scope, the inclusions above are part of every book.</p>
+                    <div style="margin-top: 2.5rem;">
+                        <a href="contact.html" class="btn-primary">Request a Custom Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services FAQ -->
+        <section class="section bg-white sec-blue" style="position: relative; overflow: hidden;">
+            <div class="container">
+                <div class="section-header center gs-fade">
+                    <span class="tamil-sub" lang="ta">அடிக்கடி கேட்கப்படும் கேள்விகள்</span>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+
+                <div class="gs-fade" style="max-width: 760px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">
+                            <span>How long does the Heritage Book Package take?</span>
+                            <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most families receive their finished hardcover book within about eight to twelve weeks of the first interview. Timing depends on family size, how much research the ancestral lineage requires, and how many photographs need restoring. We share a clear schedule with you after the consultation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">
+                            <span>What if our family has very few old photographs?</span>
+                            <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>That is common, and it is not a problem. The story carries the book. We build it around the memories your elders share, then add historical and cultural context about the ancestral village and the migration to Malaya. Any photographs you do have are restored and given pride of place.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">
+                            <span>Is the book really in both English and Tamil?</span>
+                            <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Every Heritage Book is bilingual. Names, places, customs, and the narrative are presented in English and Tamil, so elders can read it in their mother tongue and younger, English-first generations can read it too. We conduct interviews in whichever language your family is most comfortable speaking.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">
+                            <span>Do you deliver the book within Malaysia?</span>
+                            <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We are based in Kuala Lumpur and deliver across Malaysia. We can also ship to family members elsewhere in South East Asia and beyond, so relatives in other countries can hold the same book.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">
+                            <span>What is the private digital vault?</span>
+                            <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Alongside the printed book, you receive a private digital vault: a secure online space holding the high-resolution PDF of your book and your restored photographs. It means the work is never lost, and it can be shared with family living anywhere in the world.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">
+                            <span>How much does the Heritage Book Package cost?</span>
+                            <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Every book is bespoke, so each is quoted individually based on the size of your family and the depth of historical research involved. After a short consultation we send a clear, itemized quote with no obligation. Request a custom quote through our contact page to begin.</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <a href="contact.html" class="btn-primary">Start Your Family's Book</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -82,14 +414,8 @@
             <!-- Brand Column -->
             <div class="footer-col brand-col">
                 <div class="footer-logo-container">
-                    <div class="footer-logo-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <polygon points="12,2 22,12 12,22 2,12" />
-                            <circle cx="12" cy="12" r="3" fill="currentColor" />
-                        </svg>
+                        <img src="images/kyf-logo-circle.png" srcset="images/kyf-logo-circle.png 1x, images/kyf-logo-circle@2x.png 2x" alt="Know Your Family" class="footer-logo-img">
                     </div>
-                    <span class="footer-brand-name">Know Your Family</span>
-                </div>
                 <p class="footer-desc">Dedicated to preserving Tamil culture through premium genealogy, personal history, and breathtaking legacy books.</p>
                 <div class="footer-socials">
                     <a href="#" class="social-box" aria-label="Facebook">
@@ -127,9 +453,9 @@
             <div class="footer-col">
                 <h4 class="footer-heading">Connect</h4>
                 <ul class="footer-contact">
-                    <li><a href="tel:18002081405" class="contact-link">1 (800) 208-1405</a></li>
-                    <li><a href="mailto:hello@knowyourfamily.com" class="contact-link">hello@knowyourfamily.com</a></li>
-                    <li class="contact-text">Chennai & Worldwide</li>
+                    <li><a href="tel:+60000000000" class="contact-link">[+60 phone placeholder]</a></li>
+                    <li><a href="mailto:hello@knowurfamily.com" class="contact-link">hello@knowurfamily.com</a></li>
+                    <li class="contact-text">Kuala Lumpur, Malaysia</li>
                 </ul>
             </div>
         </div>

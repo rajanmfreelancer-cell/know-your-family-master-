@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const MIME_TYPES = {
   '.html': 'text/html',
@@ -15,11 +15,16 @@ const MIME_TYPES = {
   '.jpeg': 'image/jpeg',
   '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
-  '.ico': 'image/x-icon'
+  '.ico': 'image/x-icon',
+  '.xml': 'application/xml',
+  '.txt': 'text/plain',
+  '.webmanifest': 'application/manifest+json'
 };
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
+  // Strip query string (e.g. cache-busting ?v=2) before resolving the file
+  const urlPath = req.url.split('?')[0];
+  let filePath = path.join(__dirname, urlPath === '/' ? 'index.html' : urlPath);
   
   // Prevent directory traversal
   if (!filePath.startsWith(__dirname)) {
@@ -42,7 +47,7 @@ const server = http.createServer((req, res) => {
       }
     } else {
       // Add Cache-Control header for static assets
-      const cacheStaticTypes = ['text/css', 'text/javascript', 'image/png', 'image/jpeg', 'image/gif', 'image/svg+xml', 'image/x-icon'];
+      const cacheStaticTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/svg+xml', 'image/x-icon'];
       if (cacheStaticTypes.includes(contentType)) {
         res.setHeader('Cache-Control', 'public, max-age=31536000'); // Cache for 1 year
       } else {

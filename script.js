@@ -88,10 +88,13 @@ document.querySelectorAll('.faq-question').forEach(button => {
         document.querySelectorAll('.faq-item').forEach(otherItem => {
             if (otherItem !== item) {
                 otherItem.classList.remove('active');
+                const otherBtn = otherItem.querySelector('.faq-question');
+                if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
             }
         });
-        
-        item.classList.toggle('active');
+
+        const isOpen = item.classList.toggle('active');
+        button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 });
 
